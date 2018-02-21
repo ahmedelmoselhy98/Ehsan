@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Ehsan</string>
+    <string name="main_page_sign_in_button">تسجيل دخول</string>
+    <string name="main_page_sign_up_button">حساب جديد</string>
+    <string name="sign_in_page_title_text_view">تسجيل الدخول</string>
+    <string name="email">البريد الإلكترونى</string>
+    <string name="password">كلمة المرور</string>
+    <string name="sign_in_page_remember_me_check_box">تذكرنى</string>
+    <string name="forget_password">نسيت كلمة المرور ؟</string>
+    <string name="register">التسجيل</string>
+    <string name="sign_up_activity_donor_fragment">التسجيل كمتبرع</string>
+    <string name="sign_up_activity_association_fragment">التسجيل كجمعية خيرية</string>
+    <string name="donar_name">اسم المتبرع</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="association_name">اسم الجمعية</string>
+    <string name="conditions">الشروط والاحكام وسياسة الخصوصية</string>
+    <string name="authorization_number">رقم التصريح</string>
+    <string name="authorization_number_image">الرجاء اختيار صورة تصريح الجمعية من هاتفك....</string>
+    <string name="financial_donation_sms_fragment">الرسائل القصيره</string>
+    <string name="financial_donation_bank_fragment">الحسابات البنكية</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sms_service_header_textview">خدمة دعم الجمعية من خلال الرسائل القصرة SMS</string>
+    <string name="sms_service_number_textview">5052</string>
+    <string name="sms_service_donate_button">تبرع</string>
+    <string name="bank_account_name_textview">بنك ساب</string>
+    <string name="bank_account_number_textview">sa75 8000 0243 0013 6139 0000 0100</string>
+    <string name="donor_home_page_categ1_textview">تبرع بالمال</string>
+    <string name="donor_home_page_categ2_textview">تبرع بالملابس</string>
+    <string name="donor_home_page_categ3_textview">تبرع الاثاث</string>
+    <string name="donor_home_page_categ4_textview">تبرع بالاجهزه المنزلية</string>
+    <string name="donor_home_page_categ5_textview">تبرع بالادوات المدرسية</string>
+    <string name="nav_drawer_item_user_profile">الصفحة الشخصية</string>
+    <string name="nav_drawer_item_my_donotaion">قائمة تبرعاتى</string>
+    <string name="nav_drawer_item_about_us">عن التطبيق</string>
+    <string name="nav_drawer_item_settings">الاعدادات</string>
+    <string name="profile_page_user_name">الاسم:</string>
+    <string name="profile_page_email">البريد الالكترونى</string>
+    <string name="profile_page_phone_number">رقم الهاتف</string>
+
+
+</resources>

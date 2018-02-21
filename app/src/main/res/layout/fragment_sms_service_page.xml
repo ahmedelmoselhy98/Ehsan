@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.e.k.m.a.ehsan.donor.SmsServicePage">
+
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/sms_service_header_textview"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sms_service_number_textview"
+        android:id="@+id/sms_service_number_textview"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_margin="8dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_groceries"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/sms_service_donate_button"
+        android:id="@+id/sms_service_donate_button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/main_page_buttons_pattern"
+        />
+</LinearLayout>

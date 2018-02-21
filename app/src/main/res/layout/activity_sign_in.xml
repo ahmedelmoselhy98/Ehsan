@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context="com.e.k.m.a.ehsan.authentication.signin.SignInActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:layout_gravity="center"
+    >
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_groceries"
+        android:layout_gravity="center"
+        />
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:layout_margin="8dp"
+        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+        />
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_margin="8dp"
+        android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_page_remember_me_check_box"
+        android:id="@+id/sign_in_page_remember_me_check_box"
+        android:layout_margin="8dp"
+        android:padding="16dp"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-light"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forget_password"
+        android:text="@string/forget_password"
+        android:layout_margin="8dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:id="@+id/sign_register"
+        android:background="@drawable/main_page_buttons_pattern"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        />
+
+</LinearLayout>
+</ScrollView>
+</android.support.design.widget.CoordinatorLayout>
