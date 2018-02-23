@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import com.e.k.m.a.ehsan.R;
 import com.e.k.m.a.ehsan.donor.FinancialDonationRecyclerAdapter;
 
-public class AssociationRecyclerView extends AppCompatActivity {
+public class DonorsRecyclerView extends AppCompatActivity {
 
 
     RecyclerView associationRecyclerView;

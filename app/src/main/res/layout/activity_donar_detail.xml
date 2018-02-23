@@ -28,8 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:padding="16dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_tshirt"
+        app:srcCompat="@drawable/ic_person_add_black_24dp"
         />
     <LinearLayout
         android:layout_width="match_parent"

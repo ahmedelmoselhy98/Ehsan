@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layoutDirection="rtl"
-    tools:context="com.e.k.m.a.ehsan.donor.DonorHomePage">
+    tools:context="com.e.k.m.a.ehsan.donor.HomePage">
 
 
     <android.support.design.widget.AppBarLayout
@@ -28,7 +28,7 @@
     <ImageView
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/ic_dehaze_black_24dp"
+        app:srcCompat="@drawable/ic_dehaze_black_24dp"
         android:layout_gravity="center_vertical"
         android:layout_margin="8dp"
         android:onClick="openNavBar"
@@ -40,30 +40,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
         >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@android:color/holo_purple"
+            android:layout_margin="4dp"
+            android:onClick="openClothesPage"
             >
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:onClick="openClothesPage"
                 android:layout_margin="8dp"
-                android:src="@drawable/ic_tshirt"
+                app:srcCompat="@drawable/ic_tshirt"
                 android:layout_gravity="center"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
+                android:onClick="openClothesPage"
                 android:textSize="16sp"
                 android:layout_gravity="center"
                 android:id="@+id/donor_home_page_categ2_textview"
@@ -72,22 +77,27 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_margin="4dp"
+            android:onClick="openFurniturePage"
             >
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:src="@drawable/ic_armchair"
+                android:onClick="openFurniturePage"
+                app:srcCompat="@drawable/ic_armchair"
                 android:layout_gravity="center"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
+                android:onClick="openFurniturePage"
                 android:textSize="16sp"
                 android:layout_gravity="center"
                 android:id="@+id/donor_home_page_categ3_textview"
@@ -97,19 +107,24 @@
 </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_weight="1"
+                android:background="@android:color/holo_red_light"
+                android:layout_margin="4dp"
+                android:onClick="openFinancialDonationHomePage"
                 >
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
                     android:layout_margin="8dp"
-                    android:src="@drawable/ic_money"
+                    app:srcCompat="@drawable/ic_money"
                     android:layout_gravity="center"
                     android:onClick="openFinancialDonationHomePage"
                     />
@@ -127,13 +142,17 @@
         </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_margin="4dp"
+            android:onClick="openHouseToolsPage"
             >
 
             <ImageView
@@ -141,7 +160,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:src="@drawable/ic_washing_machine"
+                android:onClick="openHouseToolsPage"
+                app:srcCompat="@drawable/ic_washing_machine"
                 android:layout_gravity="center"
                 />
             <TextView
@@ -149,6 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
                 android:textSize="16sp"
+                android:onClick="openHouseToolsPage"
                 android:layout_gravity="center"
                 android:id="@+id/donor_home_page_categ4_textview"
                 android:text="@string/donor_home_page_categ4_textview"
@@ -156,9 +177,12 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@android:color/holo_purple"
+            android:layout_margin="4dp"
+            android:onClick="openSchoolToolsPage"
             >
 
             <ImageView
@@ -166,7 +190,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:layout_margin="8dp"
-                android:src="@drawable/ic_book_cover"
+                android:onClick="openSchoolToolsPage"
+                app:srcCompat="@drawable/ic_book_cover"
                 android:layout_gravity="center"
                 />
             <TextView
@@ -174,6 +199,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
                 android:textSize="16sp"
+                android:onClick="openSchoolToolsPage"
                 android:layout_gravity="center"
                 android:id="@+id/donor_home_page_categ5_textview"
                 android:text="@string/donor_home_page_categ5_textview"

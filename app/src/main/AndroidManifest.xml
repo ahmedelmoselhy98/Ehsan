@@ -18,13 +18,17 @@
         </activity>
         <activity android:name=".authentication.signin.SignInActivity" />
         <activity android:name=".authentication.signup.SignUpActivity" />
-        <activity android:name=".donor.DonorHomePage" />
-        <activity android:name=".association.AssociationHomePage" />
-        <activity android:name=".association.AssociationRecyclerView" />
+        <activity android:name=".donor.HomePage" />
+        <activity android:name=".association.MyDoationsPage" />
+        <activity android:name=".association.DonorsRecyclerView" />
         <activity android:name=".donor.FinancialDonationHomePage" />
         <activity android:name=".donor.FinancialDonationSecondPage" />
         <activity android:name=".donor.Profile" />
-        <activity android:name=".association.DonarDetail"></activity>
+        <activity android:name=".association.DonarDetail" />
+        <activity android:name=".clothespage.ClothesPage" />
+
+        <activity android:name=".settings.Settings" />
+        <activity android:name=".AboutUs"></activity>
     </application>
 
 </manifest>

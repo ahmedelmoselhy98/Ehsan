@@ -1,4 +1,4 @@
-package com.e.k.m.a.ehsan.donor;
+package com.e.k.m.a.ehsan.clothespage;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,32 +9,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 
 import com.e.k.m.a.ehsan.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FinancialDonationSecondPage extends AppCompatActivity {
-
+public class ClothesPage extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private String smsServiceFragmentTitle;
-    private String bankAccountsFragmentTitle;
+    private String clothesManText;
+    private String clothesKidText;
+    private String clothesWomanText;
+    private CheckBox o5raCheckBox;
+    private EditText o5raEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_financial_donation_second_page);
+        setContentView(R.layout.activity_clothes_page);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        o5raCheckBox = findViewById(R.id.o5ra_checkbox);
+        o5raEditText = findViewById(R.id.o5ra_descrition_edittext);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        smsServiceFragmentTitle = getResources().getString(R.string.financial_donation_sms_fragment);
-        bankAccountsFragmentTitle = getResources().getString(R.string.financial_donation_bank_fragment);
+        clothesManText = getResources().getString(R.string.clothes_man);
+        clothesWomanText = getResources().getString(R.string.clothes_woman);
+        clothesKidText = getResources().getString(R.string.clothes_kid);
+
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
@@ -44,8 +49,9 @@ public class FinancialDonationSecondPage extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new SmsServicePage(), smsServiceFragmentTitle);
-        adapter.addFragment(new BankAccountsPage(), bankAccountsFragmentTitle);
+        adapter.addFragment(new ClothesWomanFragment(), clothesWomanText);
+        adapter.addFragment(new ClostherManFragment(), clothesManText);
+        adapter.addFragment(new ClothesKidsFragment(), clothesKidText);
         viewPager.setAdapter(adapter);
     }
 
@@ -79,9 +85,15 @@ public class FinancialDonationSecondPage extends AppCompatActivity {
         }
     }
 
-    public void donateWithSms(View view) {
 
+    public void o5ra(View view){
+        o5raCheckBox = findViewById(R.id.o5ra_checkbox);
+        o5raEditText = findViewById(R.id.o5ra_descrition_edittext);
+
+        if (o5raCheckBox.isChecked()){
+        o5raEditText.setVisibility(View.VISIBLE);
+    }else
+            o5raEditText.setVisibility(View.GONE);
     }
-
 
 }

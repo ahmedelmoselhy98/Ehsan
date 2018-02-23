@@ -12,8 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.e.k.m.a.ehsan.R;
-import com.e.k.m.a.ehsan.association.AssociationHomePage;
-import com.e.k.m.a.ehsan.donor.DonorHomePage;
+import com.e.k.m.a.ehsan.association.MyDoationsPage;
+import com.e.k.m.a.ehsan.donor.HomePage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,11 +82,14 @@ public class SignUpActivity extends AppCompatActivity {
         }
     }
 
+
     public void getAccess1(View view){
-        startActivity(new Intent(this, AssociationHomePage.class));
+        HomePage.userType = "user";
+        startActivity(new Intent(this, HomePage.class));
     }
     public void getAccess(View view){
-        startActivity(new Intent(this, DonorHomePage.class));
+        HomePage.userType = "association";
+        startActivity(new Intent(this, HomePage.class));
     }
 
 }
