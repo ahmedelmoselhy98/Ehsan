@@ -24,16 +24,16 @@ public class ClothesPage extends AppCompatActivity {
     private String clothesManText;
     private String clothesKidText;
     private String clothesWomanText;
-    private CheckBox o5raCheckBox;
-    private EditText o5raEditText;
+    private CheckBox womanCheckBox6;
+    private EditText womanEditText6Description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clothes_page);
 
-        o5raCheckBox = findViewById(R.id.o5ra_checkbox);
-        o5raEditText = findViewById(R.id.o5ra_descrition_edittext);
+        womanCheckBox6 = findViewById(R.id.fragment_clothes_woman_checkbox6);
+        womanEditText6Description = findViewById(R.id.fragment_clothes_woman_edittext6_description);
 
 
         clothesManText = getResources().getString(R.string.clothes_man);
@@ -87,13 +87,13 @@ public class ClothesPage extends AppCompatActivity {
 
 
     public void o5ra(View view){
-        o5raCheckBox = findViewById(R.id.o5ra_checkbox);
-        o5raEditText = findViewById(R.id.o5ra_descrition_edittext);
+        womanCheckBox6 = findViewById(R.id.fragment_clothes_woman_checkbox6);
+        womanEditText6Description = findViewById(R.id.fragment_clothes_woman_edittext6_description);
 
-        if (o5raCheckBox.isChecked()){
-        o5raEditText.setVisibility(View.VISIBLE);
+        if (womanCheckBox6.isChecked()){
+        womanEditText6Description.setVisibility(View.VISIBLE);
     }else
-            o5raEditText.setVisibility(View.GONE);
+            womanEditText6Description.setVisibility(View.GONE);
     }
 
 }

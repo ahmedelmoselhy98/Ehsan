@@ -16,11 +16,11 @@ import com.e.k.m.a.ehsan.R;
  * Created by ahmedelmoselhy on 2/20/2018.
  */
 
-public class AssociationRecyclerViewAdapter extends RecyclerView.Adapter<AssociationRecyclerViewAdapter.MyAssociationViewHolder> {
+public class DonorsRecyclerViewAdapter extends RecyclerView.Adapter<DonorsRecyclerViewAdapter.MyAssociationViewHolder> {
     private static int NUM_OF_ITEMS;
     private static Context mContext;
 
-    public AssociationRecyclerViewAdapter(Context mContext,int NUM_OF_ITEMS) {
+    public DonorsRecyclerViewAdapter(Context mContext, int NUM_OF_ITEMS) {
         this.NUM_OF_ITEMS = NUM_OF_ITEMS;
         this.mContext = mContext;
     }
@@ -28,7 +28,7 @@ public class AssociationRecyclerViewAdapter extends RecyclerView.Adapter<Associa
     @Override
     public MyAssociationViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View v = layoutInflater.inflate(R.layout.association_recycler_view_item,parent,false);
+        View v = layoutInflater.inflate(R.layout.donors_recycler_view_item,parent,false);
         MyAssociationViewHolder myAssociationViewHolder = new MyAssociationViewHolder(v);
         return myAssociationViewHolder;
     }

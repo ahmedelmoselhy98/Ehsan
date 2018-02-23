@@ -13,6 +13,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
+            android:id="@+id/activity_clothes_page_imageview"
             app:srcCompat="@drawable/ic_person_add_black_24dp"
             />
     <android.support.design.widget.AppBarLayout

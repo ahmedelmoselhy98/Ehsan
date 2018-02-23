@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
     >
@@ -17,7 +19,8 @@
                 android:layout_height="100dp"
                 android:padding="16dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_groceries"
+                app:srcCompat="@drawable/ic_groceries"
+                android:id="@+id/bank_account_image_imageview"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -32,7 +35,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/financial_donation_association_description_textview"
+                android:id="@+id/bank_account_number_textview"
                 android:text="@string/bank_account_number_textview"
                 android:gravity="center"
                 android:padding="8dp"

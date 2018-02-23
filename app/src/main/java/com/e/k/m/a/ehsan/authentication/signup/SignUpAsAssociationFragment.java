@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 
 import com.e.k.m.a.ehsan.R;
 
-public class SecondFragment extends Fragment{
+public class SignUpAsAssociationFragment extends Fragment{
 
-    public SecondFragment() {
+    public SignUpAsAssociationFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class SecondFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        return inflater.inflate(R.layout.sign_up_as_association_fragment, container, false);
     }
 
 }

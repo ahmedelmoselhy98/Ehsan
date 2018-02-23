@@ -114,6 +114,15 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="financial_donation_association_name">جمعية احسان الخيريه - فرع الرياض</string>
+    <string name="fragment_clothes_woman_checkbox1">قميص</string>
+    <string name="fragment_clothes_woman_checkbox2">بنطال</string>
+    <string name="fragment_clothes_woman_checkbox3">تنوره</string>
+    <string name="fragment_clothes_woman_checkbox4">جوارب</string>
+    <string name="fragment_clothes_woman_checkbox5">عباءه</string>
+    <string name="fragment_clothes_woman_checkbox6">اخرى</string>
+    <string name="fragment_clothes_woman_button">تبرع</string>
+    <string name="financial_donation_association_description_textview">جمعية احسان الخيريه بالرياض تهدف الى ترسيخ مبدا التكافل الاجتماعى بين افراد المجتمع وتحويله الى واقع عملى</string>
 
 
 </resources>

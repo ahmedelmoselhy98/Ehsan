@@ -12,7 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.e.k.m.a.ehsan.R;
-import com.e.k.m.a.ehsan.association.MyDoationsPage;
 import com.e.k.m.a.ehsan.donor.HomePage;
 
 import java.util.ArrayList;
@@ -47,8 +46,8 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new OneFragment(), donorFragmentTitle);
-        adapter.addFragment(new SecondFragment(), associatedFragmentTitle);
+        adapter.addFragment(new SignUpAsDontorFragment(), donorFragmentTitle);
+        adapter.addFragment(new SignUpAsAssociationFragment(), associatedFragmentTitle);
         viewPager.setAdapter(adapter);
     }
 
