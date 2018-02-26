@@ -82,10 +82,6 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
 
-    public void getAccess1(View view){
-        HomePage.userType = "user";
-        startActivity(new Intent(this, HomePage.class));
-    }
     public void getAccess(View view){
         HomePage.userType = "association";
         startActivity(new Intent(this, HomePage.class));

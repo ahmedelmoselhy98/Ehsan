@@ -108,7 +108,7 @@
                 android:background="@drawable/sign_up_association_regiter"
                 android:layout_gravity="center"
                 android:layout_margin="8dp"
-                android:onClick="getAccess1"
+                android:onClick="getAccess"
                 tools:ignore="OnClick" />
         </LinearLayout>
     </ScrollView>

@@ -26,9 +26,9 @@
         <activity android:name=".donor.Profile" />
         <activity android:name=".association.DonarDetail" />
         <activity android:name=".clothespage.ClothesPage" />
-
         <activity android:name=".settings.Settings" />
-        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".AboutUs" />
+        <activity android:name=".clothespage.FoodPage"></activity>
     </application>
 
 </manifest>

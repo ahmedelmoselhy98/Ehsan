@@ -1,26 +1,17 @@
 package com.e.k.m.a.ehsan.clothespage;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.e.k.m.a.ehsan.R;
-import com.e.k.m.a.ehsan.donor.HomePage;
 import com.e.k.m.a.ehsan.models.DonationPost;
 import com.e.k.m.a.ehsan.models.DonorModel;
 import com.e.k.m.a.ehsan.models.FirebaseConstants;
@@ -35,12 +26,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ClothesPage extends AppCompatActivity {
+public class FoodPage extends AppCompatActivity {
 
     private DonorModel globalDonorModel;
     private DonationPost globalDonationPost;
@@ -51,12 +39,12 @@ public class ClothesPage extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth;
     private FirebaseUser mFirebaseUser;
     private DatabaseReference mDatabaseReference;
-    private static final String TAG = "ClothesPage";
+    private static final String TAG = "FoodPage";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clothes_page);
+        setContentView(R.layout.activity_food_page);
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
@@ -73,7 +61,7 @@ public class ClothesPage extends AppCompatActivity {
                 globalDonorModel = dataSnapshot.getValue(DonorModel.class);
                 polishUi(globalDonorModel);
                 Log.e(TAG, "success to read value.");
-                Toast.makeText(ClothesPage.this, globalDonorModel.getDonorName()+" "+
+                Toast.makeText(FoodPage.this, globalDonorModel.getDonorName()+" "+
                         globalDonorModel.getDonorAddress()+" "+globalDonorModel.getDonorPhoneNumber(), Toast.LENGTH_SHORT).show();
             }
             @Override
@@ -81,23 +69,23 @@ public class ClothesPage extends AppCompatActivity {
                 Log.e(TAG, "Failed to read value.", databaseError.toException());
             }
         });
-            }
+    }
 
 
-            /////////////////////////////////////////////
+    /////////////////////////////////////////////
     // fill Ui with user data and initialize the ui elements
     public void polishUi(DonorModel donorModel){
-        userNameTextView = findViewById(R.id.clothes_page_donor_name_textview);
+        userNameTextView = findViewById(R.id.food_page_donor_name_textview);
         userNameTextView.setText(donorModel.getDonorName());
-        userAddressTextView = findViewById(R.id.clothes_page_donor_address_textview);
+        userAddressTextView = findViewById(R.id.food_page_donor_address_textview);
         userAddressTextView.setText(donorModel.getDonorAddress());
-        userPhoneNumber = findViewById(R.id.clothes_page_donor_phone_number_textview);
+        userPhoneNumber = findViewById(R.id.food_page_donor_phone_number_textview);
         userPhoneNumber.setText(donorModel.getDonorPhoneNumber());
-        userProfileImageView = findViewById(R.id.clothes_page_donor_image_imageview);
+        userProfileImageView = findViewById(R.id.food_page_donor_image_imageview);
         if (!TextUtils.isEmpty(globalDonorModel.getDonorProfileImage()))
             Picasso.with(this).load(globalDonorModel.getDonorProfileImage()).into(userProfileImageView);
-        postDescriptionEditText = findViewById(R.id.clothes_page_donation_description_edittext);
-        submitDonation = findViewById(R.id.clothes_page_donate_button);
+        postDescriptionEditText = findViewById(R.id.food_page_donation_description_edittext);
+        submitDonation = findViewById(R.id.food_page_donate_button);
         submitDonation.setOnClickListener(onClickListener);
     }
 
@@ -111,14 +99,14 @@ public class ClothesPage extends AppCompatActivity {
         globalDonationPost.setDonarImage(globalDonorModel.getDonorProfileImage());
         globalDonationPost.setDescription(postDescriptionEditText.getText().toString());
     }
-    public void addPostToClothesCategory(){
-        DatabaseReference donorUserDatabaseReference = mDatabaseReference.child(FirebaseConstants.CLOTHES_CATEGORY);
+    public void addPostToFoodCategory(){
+        DatabaseReference donorUserDatabaseReference = mDatabaseReference.child(FirebaseConstants.FOOD_CATEGORY);
         donorUserDatabaseReference.push().setValue(globalDonationPost).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
                     Log.e(TAG, "addPostToFoodCategory:success");
-                    Toast.makeText(ClothesPage.this, "Done", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FoodPage.this, "Done", Toast.LENGTH_SHORT).show();
                 }else {
                     Log.e(TAG, "addPostToFoodCategory:failure", task.getException());
                 }
@@ -133,7 +121,7 @@ public class ClothesPage extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
                     Log.e(TAG, "addPostToMyDonation:success");
-                    Toast.makeText(ClothesPage.this, "Done", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FoodPage.this, "Done", Toast.LENGTH_SHORT).show();
                 }else {
                     Log.e(TAG, "addPostToMyDonation:failure", task.getException());
                 }
@@ -146,7 +134,7 @@ public class ClothesPage extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             buildPost();
-            addPostToClothesCategory();
+            addPostToFoodCategory();
             addPostToMyDonation();
 
         }

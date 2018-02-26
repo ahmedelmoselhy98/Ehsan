@@ -28,7 +28,7 @@
     <string name="bank_account_number_textview">sa75 8000 0243 0013 6139 0000 0100</string>
     <string name="donor_home_page_categ1_textview">تبرع بالمال</string>
     <string name="donor_home_page_categ2_textview">تبرع بالملابس</string>
-    <string name="donor_home_page_categ3_textview">تبرع الاثاث</string>
+    <string name="donor_home_page_categ3_textview">تبرع بالطعام</string>
     <string name="donor_home_page_categ4_textview">تبرع بالاجهزه المنزلية</string>
     <string name="donor_home_page_categ5_textview">تبرع بالادوات المدرسية</string>
     <string name="nav_drawer_item_user_profile">الصفحة الشخصية</string>
@@ -123,6 +123,9 @@
     <string name="fragment_clothes_woman_checkbox6">اخرى</string>
     <string name="fragment_clothes_woman_button">تبرع</string>
     <string name="financial_donation_association_description_textview">جمعية احسان الخيريه بالرياض تهدف الى ترسيخ مبدا التكافل الاجتماعى بين افراد المجتمع وتحويله الى واقع عملى</string>
+    <string name="nav_drawer_item_logout">Log Out</string>
+    <string name="sign_up_donor_address">العنوان</string>
+    <string name="sign_up_donor_phone_number">رقم الهاتف</string>
 
 
 </resources>

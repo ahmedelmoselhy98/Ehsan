@@ -20,7 +20,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/main_page_image_view"
-        android:src="@drawable/ic_groceries"
+        app:srcCompat="@drawable/ic_groceries"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_margin="16dp"
